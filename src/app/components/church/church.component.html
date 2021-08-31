@@ -1,0 +1,19 @@
+<div class="products">
+  <!-- <h2> IBEFiladelfia </h2> -->
+  <div class="childProducts">
+    <div class="boxProducts wow slideInLeft" data-wow-duration="1.5s" 
+     *ngFor="let c of church">    
+      <div class="box">
+        <img class="wow slideInRight" data-wow-duration="1.5s" data-wow-delay=".6s" [src]="c.img" alt=" Cafe {{  title }} ">
+        <h3 class="mt-3 wow slideInUp" data-wow-duration="1.5s" data-wow-delay=".7s">{{ c.title }}</h3>
+        <p class="wow slideInDown" data-wow-duration="1.5s" data-wow-delay=".8s">{{ c.des }}</p>
+      </div>
+      <div class="box">
+        <a target="_blank" [routerLink]="c.url"
+          class="wow slideInDown" data-wow-duration="1.5s" data-wow-delay="1s"> 
+          <i class="fas fa-angle-double-right"></i> Ver más... </a>
+      </div>
+    </div>
+  </div>
+  
+</div>

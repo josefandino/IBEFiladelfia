@@ -1,0 +1,66 @@
+<nav id="navpc" class="wow slideInDown" data-wow-duration="1s">
+  <div id="logo">
+    <a routerLink="/">
+      <img class="wow slideInRight" data-wow-duration="2s" id="img" [src]="logo" alt="Logo {{ title }}">
+    </a>
+  </div>
+  <ul id="nav">
+    <li *ngFor="let r of routes">
+      <a class="wow slideInUp" data-wow-duration="2s"
+        onclick="closeNav()" [routerLink]="r.path">{{ r.name }}</a>
+    </li>
+
+    <!-- <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Servicios
+      </a>
+      <ul class="dropdown-menu bg-dark drop" aria-labelledby="navbarDropdown" >
+        <li *ngFor="let d of drop">
+          <a class="dropdown-item" [routerLink]="d.path">{{ d.name }}</a>
+        </li>
+      </ul>
+    </li> -->
+
+    
+    <li class="nav-item wow slideInLeft" data-wow-duration="1.7s">
+      <a target="_blank" class="nav-link" href="{{ ws }}" >Contáctenos</a>
+    </li>
+    
+  </ul>
+</nav>
+
+<nav class="mobile">
+  <div class="bar" onclick="openNav()">
+    <span class="wow slideInRight" data-wow-duration="1.7s">&#9776;</span>
+  </div>
+
+  <div id="myNav" class="overlay">
+    <div class="overlay-content">
+      <p class="text-white">{{ title }}</p>
+      <li *ngFor="let r of routes">
+        <a  onclick="closeNav()" [routerLink]="r.path">{{ r.name }}</a>
+      </li>
+
+      <li *ngFor="let d of drop">
+        <a onclick="closeNav()" class="dropdown-item" [routerLink]="d.path">{{ d.name }}</a>
+      </li>
+
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Servicios
+        </a>
+        <ul class="dropdown-menu bg-dark drop" aria-labelledby="navbarDropdown" >
+          <li *ngFor="let d of drop">
+            <a onclick="closeNav()" class="dropdown-item" [routerLink]="d.path">{{ d.name }}</a>
+          </li>
+        </ul>
+      </li> -->
+      
+
+      <li class="nav-item wow slideInLeft" data-wow-duration="1.5s">
+        <a target="_blank" class="nav-link" href="{{ ws }}" >Contáctenos</a>
+      </li>
+
+    </div>
+  </div>
+</nav>

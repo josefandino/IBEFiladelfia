@@ -1,0 +1,22 @@
+.footer{width:100%;height:auto;
+  background:#054778;
+  background:var(--azul);
+  padding: 1rem;
+}
+
+.childFooter{width:100%;height:auto;
+  position:relative;margin:0;padding:2rem;
+  overflow:hidden;box-sizing:border-box;
+
+  .boxFooter{width:100%;height:auto;
+    display:flex;align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    padding: 1rem;
+    img{width:100%;max-width:150px;height:auto;}
+  }
+}
+@media only screen and (max-width:685px){
+  .childFooter{display:grid;padding: 0;
+    grid-template-columns:1fr;}
+}
