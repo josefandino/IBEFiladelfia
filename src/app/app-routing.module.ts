@@ -28,7 +28,7 @@ const routes: Routes = [
     scrollPositionRestoration: 'enabled',
     useHash: false,
     initialNavigation: 'enabled'
-  })],
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
